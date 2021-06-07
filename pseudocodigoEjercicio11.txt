@@ -1,0 +1,42 @@
+Inicio pseudocodigoEjercicio11
+	Variable auxiliar
+	Variable pares
+	Variable paresNoCeros
+	Variable numerosSegundaDocena
+	Variable numeroMasGrande
+	Variable i
+	
+	Repetir (Desde i = 0; hasta i<10; i= i + 1) hacer
+		auxiliar = ruleta(0,36)
+		
+		Si(auxiliar%2 == 0)
+			pares = pares + 1
+			
+			Si(auxiliar!=0) hacer
+				paresNoCeros = paresNoCeros + auxiliar
+			FinSi
+		FinSi
+		
+		Si(auxiliar>=13 && auxiliar <=24) hacer
+			numerosSegundaDocena = numerosSegundaDocena + 1
+		FinSi
+		
+		Si(numeroMasGrande<auxiliar) hacer
+			numeroMasGrande = auxiliar
+		FinSi
+	FinRepetir
+	
+	//Inciso e
+	/*
+	  Ya no usariamos la estructura del bucle anterior
+	  En ese caso usariamos el bucle hacer-hasta
+	  Como a continuacion: 
+	  
+	  Variable veces
+	  hacer
+	  	auxiliar = ruleta(0,36)
+	  	veces = veces + 1
+	  Repetir hasta(auxiliar != 36) hacer
+
+	*/
+Fin
